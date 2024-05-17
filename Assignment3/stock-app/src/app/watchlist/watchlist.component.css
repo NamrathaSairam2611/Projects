@@ -1,0 +1,48 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto auto auto;
+  width: 70%;
+}
+
+.card {
+  margin: 0.6rem;
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+
+  padding: 0.5rem 0.7rem;
+  font-size: 0.6rem;
+  border-radius: 3px;
+}
+
+.close:hover {
+  border: 1px solid black;
+}
+
+.half {
+  width: 50%; /* Adjust width as needed */
+}
+
+.content {
+  display: flex; /* Keep flexbox properties */
+  justify-content: space-between; /* Adjust alignment as needed */
+  margin-top: 2rem;
+}
+
+.empty-watchlist {
+  padding: 10px;
+  background-color: #ffefc4;
+  border: 1px solid #ffefc4;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 2rem;
+}

@@ -1,0 +1,212 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.stock-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.search-body-content {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.stock-search-heading {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.custom-input {
+  padding: 0;
+  border: 0px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  border: 3px solid #2024a4;
+  border-radius: 30px;
+  padding: 0.5%;
+}
+
+.form-control.custom-input {
+  flex: 1;
+}
+
+.icon-container {
+  align-items: center;
+}
+
+.search-icon,
+.close-icon {
+  cursor: pointer;
+  padding: 0 0.6rem;
+}
+
+.fa-solid,
+.bi,
+.fas {
+  font-size: 1rem;
+}
+
+.company-logo {
+  height: 10px;
+  width: 10%;
+}
+
+.bi-star-fill {
+  color: #ffdd03;
+}
+
+.search-field {
+  flex: 1;
+}
+
+.mat-form-field {
+  width: 100%;
+  background-color: white !important;
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.data {
+  font-size: 0.9rem;
+}
+
+.img-row {
+  margin: 1%;
+  border: 1px solid black;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.news-item {
+  display: flex;
+  border: 1px solid #ccc;
+}
+
+.news-image {
+  width: 25%;
+  height: auto;
+}
+
+.news-content {
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.table tr {
+  border-bottom: 2px solid #eef1f3;
+}
+
+.table td {
+  padding: 1%;
+}
+
+.table {
+  width: 55%;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.modal-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.dialog-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-dialog {
+  cursor: pointer;
+}
+
+.total-action {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.buy-action {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.custom-alert-home {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.custom-alert-home .alert {
+  border: none;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.source {
+  margin-right: auto;
+}
+
+.datetime {
+  margin-top: 5px;
+}
+
+.close {
+  margin-left: auto;
+}
+
+.details-link {
+  color: blue;
+  cursor: pointer;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.money-alert {
+  color: #e65252;
+  font-size: 0.9rem;
+}
+
+.buy-botton {
+  margin: 10px;
+}
+p {
+  margin-bottom: 0;
+}
+
+.company-middle-data {
+  margin-bottom: 0.9%;
+}

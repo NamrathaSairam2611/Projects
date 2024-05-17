@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap");
+
+.custom-navbar-bg {
+  background-color: #2024a4;
+  color: white !important;
+  padding: 0px 2%;
+  /* font-family: "Noto Sans", sans-serif; */
+  font-family: "Heebo", sans-serif;
+}
+
+.custom-navbar-bg .navbar-nav {
+  color: #fff !important;
+}
+
+.stock-search-heading {
+  font-family: "Heebo", sans-serif;
+  font-weight: 400 !important;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-item {
+  margin: 2% 0;
+  font-size: 0.7rem;
+  padding: 0rem 0.3rem;
+  /* font-family: "Noto Sans", sans-serif; */
+  font-family: "Heebo", sans-serif;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  /* font-family: "Noto Sans", sans-serif; */
+  font-family: "Heebo", sans-serif;
+}
+
+.nav-link:active,
+:hover {
+  color: #fff !important;
+}
+
+.active-link {
+  border: 1px solid white;
+  border-radius: 12px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar {
+  margin-bottom: 0; /* Reset margin */
+}
+
+.custom-navbar-footer-bg {
+  background-color: #e8e4e4;
+}
+
+.footer-content {
+  color: black;
+  font-family: "Heebo", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem;
+}

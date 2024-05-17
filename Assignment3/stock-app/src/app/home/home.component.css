@@ -1,0 +1,110 @@
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+.stock-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.search-body-content {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.stock-search-heading {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.custom-input {
+  padding: 0;
+  border: 0px;
+}
+
+.custom-input:focus {
+  outline: 1px #ffffff; /* Match your border color */
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  border: 3px solid #2024a4;
+  border-radius: 30px;
+  padding: 0.5%;
+}
+
+.form-control.custom-input {
+  flex: 1;
+}
+
+.icon-container {
+  display: inline-block;
+  /* align-items: center; */
+}
+
+.search-icon,
+.close-icon {
+  cursor: pointer;
+  padding: 0 0.6rem;
+}
+
+.fa-solid,
+.bi,
+.fas {
+  font-size: 1rem;
+}
+
+.search-field {
+  flex: 1;
+  display: flex;
+}
+
+.mat-form-field {
+  width: 100%;
+  background-color: white !important;
+  display: flex;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  background-color: white !important;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  background-color: white !important;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  height: 0;
+}
+
+::ng-deep .mdc-text-field {
+  background-color: white !important;
+  border-radius: 20px !important;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+<<<<<<< HEAD
+
+.footer-home {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.custom-navbar-footer-bg {
+  background-color: #e8e4e4;
+}
+
+.footer-content {
+  color: black;
+  font-family: "Heebo", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem;
+}
+=======
+>>>>>>> parent of bb3ad2b (Assignment 3 changes deployed)
