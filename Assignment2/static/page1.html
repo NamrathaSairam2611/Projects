@@ -1,0 +1,217 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo&family=Noto+Sans+Tai+Le&family=Noto+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <script></script>
+  </head>
+  <body class="body-content">
+    <div class="main-content">
+      <p class="stock-search-heading">Stock Search</p>
+      <div class="stock-search-bar-with-close">
+        <form
+          id="myForm"
+          style="margin: 0; padding: 0.8% 0"
+          novalidate
+          action="company_summary"
+          method="post"
+          onsubmit="submitForm(event)"
+        >
+          <img
+            src="images/search-solid.svg"
+            alt="search-icon"
+            class="search-icon"
+            onclick="submitForm(event);"
+          />
+          <input
+            type="text"
+            placeholder="Enter Stock Tinder Symbol"
+            name="symbol"
+            required
+            id="symbol"
+            autocomplete="off"
+          />
+        </form>
+
+        <div>
+          <img
+            src="images/times-solid.svg"
+            alt="search-icon"
+            class="close-icon"
+            onclick="clearInput()"
+          />
+        </div>
+      </div>
+      <div id="empty-text-validation-alert"></div>
+      <div id="api-response-error">
+        Error: No record has been found, please enter a valid symbol
+      </div>
+      <div id="tab-content">
+        <div class="tabs-section">
+          <a
+            class="tab-item active"
+            id="company-tab"
+            onclick="return getTabData('company',event)"
+            >Company</a
+          >
+          <!-- <a class="tab-item" id="stock-tab" onclick="showStockSummaryContent()"
+            >Stock Summary</a
+          >
+          <a class="tab-item" id="charts-tab" onclick="showChartsContent()"
+            >Charts</a
+          >
+          <a class="tab-item" id="news-tab" onclick="showNewsContent()"
+            >Latest News</a
+          > -->
+          <a
+            class="tab-item"
+            id="stock-tab"
+            onclick="return getTabData('stock',event)"
+            >Stock Summary</a
+          >
+          <a
+            class="tab-item"
+            id="charts-tab"
+            onclick="return getTabData('charts',event)"
+            >Charts</a
+          >
+          <a
+            class="tab-item"
+            id="news-tab"
+            onclick="return getTabData('news',event)"
+            >Latest News</a
+          >
+        </div>
+
+        <table id="company-table-content">
+          <img id="stock-image" class="stock-image" alt="Stock Image" />
+          <tr>
+            <td class="td-header"><strong>Company Name</strong></td>
+            <td class="td-data" id="company-name" style="text-align: left"></td>
+          </tr>
+          <tr>
+            <td class="td-header">Stock Ticker Symbol</td>
+            <td
+              class="td-data"
+              id="ticker-symbol"
+              style="text-align: left"
+            ></td>
+          </tr>
+          <tr>
+            <td class="td-header">Stock Exchange Code</td>
+            <td
+              id="stock-exchange-code"
+              style="text-align: left; white-space: nowrap"
+              class="td-data"
+            ></td>
+          </tr>
+          <tr>
+            <td class="td-header">Company IPO Code</td>
+            <td
+              class="td-data"
+              id="company-ipo-code"
+              style="text-align: left"
+            ></td>
+          </tr>
+          <tr>
+            <td class="td-header">Category</td>
+            <td class="td-data" id="category" style="text-align: left"></td>
+          </tr>
+        </table>
+        <div id="stock-content">
+          <table id="stock-table-content">
+            <tr></tr>
+            <tr>
+              <td class="td-header">Stock Ticker Symbol</td>
+              <td
+                class="td-data"
+                id="ticker-symbol-stock"
+                style="text-align: left"
+              ></td>
+            </tr>
+            <tr>
+              <td class="td-header">Trading day</td>
+              <td
+                class="td-data"
+                id="trading_day"
+                style="text-align: left"
+              ></td>
+            </tr>
+            <tr>
+              <td class="td-header">Previous Closing Price</td>
+              <td
+                class="td-data"
+                id="previous_closing_price"
+                style="text-align: left"
+              ></td>
+            </tr>
+            <tr>
+              <td class="td-header">Opening Price</td>
+              <td
+                class="td-data"
+                id="opening_price"
+                style="text-align: left"
+              ></td>
+            </tr>
+            <tr>
+              <td class="td-header">High Price</td>
+              <td class="td-data" id="high_price" style="text-align: left"></td>
+            </tr>
+            <tr>
+              <td class="td-header">Low Price</td>
+              <td class="td-data" id="low_price" style="text-align: left"></td>
+            </tr>
+            <tr>
+              <td class="td-header">Change</td>
+              <td class="td-data" id="change" style="text-align: left"></td>
+            </tr>
+            <tr>
+              <td class="td-header">Change Percent</td>
+              <td
+                class="td-data"
+                id="change_percent"
+                style="text-align: left"
+              ></td>
+            </tr>
+          </table>
+          <div class="recommendation-trends">
+            <p class="strong-sell-text">Strong<br />Sell</p>
+            <div id="strong_sell" class="recommendation-trends-items"></div>
+            <div id="sell" class="recommendation-trends-items"></div>
+            <div id="hold" class="recommendation-trends-items"></div>
+            <div id="buy" class="recommendation-trends-items"></div>
+            <div id="strong_buy" class="recommendation-trends-items"></div>
+            <p class="strong-buy-text">Strong<br />Buy</p>
+          </div>
+          <p class="recommendation-text">Recommendation Trends</p>
+        </div>
+
+        <div id="charts-content"></div>
+        <div id="news-content"></div>
+      </div>
+
+      <script src="script.js" async defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/highcharts@8.2.2"></script>
+      <script src="https://cdn.jsdelivr.net/npm/highcharts@8.2.2/modules/stock.js"></script>
+      <script src="https://code.highcharts.com/8.2.2/modules/exporting.js"></script>
+      <script src="https://code.highcharts.com/8.2.2/modules/accessibility.js"></script>
+      <script src="https://code.highcharts.com/8.2.2/modules/export-data.js"></script>
+      <script src="https://code.highcharts.com/8.2.2/modules/navigation.js"></script>
+    </div>
+  </body>
+</html>
