@@ -1,0 +1,316 @@
+.main-content {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.body-content {
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  background-image: url("./images/back.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.stock-search-heading {
+  font-size: 1.6rem;
+  font-family: "Noto Sans Nandinagari", sans-serif;
+  font-weight: 100;
+}
+
+#api-response-error {
+  display: none;
+  /* color: #71747e; */
+  background-color: #ececec;
+  padding: 1rem 0rem;
+  margin: 18% auto;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  width: 50%;
+  font-family: "Noto Sans Nandinagari", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+
+input[type="text"] {
+  width: 50vw;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border: 1px solid white;
+  border-radius: 0rem 1rem 0rem;
+}
+#empty-text-validation-alert {
+  background-color: white;
+  max-width: max-content;
+  margin: 0.5rem auto;
+  padding: 0.3rem 0.5rem;
+  border: 0.5px solid black;
+  box-shadow: 5px 5px 10px rgba(132, 131, 131, 0.5);
+  display: none;
+}
+
+.empty-text-validation-alert-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.exclamation-mark {
+  background-color: orange;
+  margin-right: 0.4rem;
+  padding: 0.2rem 0.6rem;
+  color: white;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.stock-search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(224, 220, 220, 0.5);
+  /* padding: 0.8rem; */
+  /* height: 1rem; */
+  border-radius: 1rem 0 0 1rem;
+}
+
+.search-icon {
+  height: 1rem;
+  padding: 0 0.8rem 0 0.8rem;
+  filter: invert(80%);
+}
+
+.search-icon:hover {
+  height: 1rem;
+  filter: invert(30%);
+}
+
+.search-icon:focus {
+  outline: none;
+}
+
+.close-icon {
+  font-size: 1.2rem;
+  height: 1rem;
+  padding: 1rem 1.2rem;
+  filter: invert(80%);
+  border-left: 1px solid rgba(224, 220, 220, 0.5);
+}
+
+.close-icon:hover {
+  cursor: pointer;
+  filter: invert(30%);
+}
+
+.stock-search-bar-with-close {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 3px rgba(224, 220, 220, 0.5);
+  border-radius: 1rem;
+  background-color: white;
+  /* height: 3rem; */
+  margin: 0 auto;
+}
+
+.tabs-section {
+  background-color: #f8f9fa;
+  margin-top: 18%;
+  display: flex;
+  flex-direction: row;
+
+  /* padding: 0.5rem; */
+}
+
+.tab-item {
+  padding: 1.3rem 1.1rem;
+  font-family: "Noto Sans Nandinagari", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.tab-item:hover {
+  cursor: pointer;
+  background-color: #e2e1e3;
+}
+
+.active {
+  background-color: #d3d2d3;
+  cursor: pointer;
+}
+
+.stock-image {
+  width: 9.5%;
+  padding: 2% 0%;
+  margin: auto;
+}
+table {
+  border-collapse: collapse;
+}
+tbody {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: table;
+}
+
+.td-header {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Noto Sans Nandinagari", sans-serif;
+}
+
+.td-data {
+  font-family: "Noto Sans Nandinagari", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+tr {
+  border-bottom: 0.5px solid #e2e1e3;
+}
+
+td {
+  text-align: right;
+  width: 50%;
+  padding: 6px;
+}
+
+#tab-content {
+  display: none;
+  width: 70%;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#company-table-content {
+  margin: 0 auto;
+  display: none;
+  text-align: center;
+  width: 60%;
+}
+#stock-table-content {
+  margin: 0 auto;
+  width: 50%;
+}
+
+#stock-content {
+  padding-top: 3%;
+  display: none;
+}
+.green-arrow-image {
+  height: 1rem;
+}
+.red-arrow-image {
+  height: 1rem;
+}
+
+.recommendation-trends {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 0;
+}
+
+.recommendation-trends-items {
+  /* padding: 0.7rem; */
+  max-width: min-content;
+  padding: 0.9rem;
+  color: white;
+}
+
+.strong-sell-text {
+  color: #ef2f41;
+  padding: 0rem 0.6rem;
+  font-size: 1rem;
+  font-family: "Noto Sans Nandinagari", sans-serif;
+}
+#strong_sell {
+  background-color: #ef2f41;
+}
+#sell {
+  background-color: #ba6a52;
+}
+#hold {
+  background-color: #839e66;
+}
+#buy {
+  background-color: #43d17a;
+}
+#strong_buy {
+  background-color: #02ff8a;
+}
+
+.strong-buy-text {
+  color: #a7d9be;
+  padding: 0rem 0.6rem;
+  font-size: 1rem;
+  font-family: "Noto Sans Nandinagari", sans-serif;
+}
+
+.recommendation-text {
+  font-family: "Noto Sans Nandinagari", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 0;
+  margin-top: 0;
+  color: #41404f;
+}
+
+#charts-content {
+  display: none;
+  margin: 0.5%;
+}
+#news-content {
+  display: none;
+
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.news-container {
+  padding: 0.8rem;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: row;
+  margin: 3% 0;
+  font-family: "Noto Sans Nandinagari", sans-serif;
+}
+
+.news-text-container {
+  text-align: left;
+  padding: 0 3%;
+  font-family: "Noto Sans Nandinagari", sans-serif;
+}
+
+.news-headline {
+  font-weight: 500;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.news-image {
+  height: 12vh;
+  width: 10%;
+}
+
+.news-date {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+.news-url {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
