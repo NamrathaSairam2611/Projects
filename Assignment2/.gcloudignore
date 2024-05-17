@@ -43,6 +43,8 @@ venv/
 
 # Ignore other unwanted files
 
-.DS_Store
-_.log
-_.env
+.DS*Store
+*.log
+\_.env
+pip3
+pip3.9
